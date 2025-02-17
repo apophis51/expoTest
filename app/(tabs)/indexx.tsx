@@ -25,7 +25,11 @@ export default function App() {
         <>
             {hasPermission && <WebView
                 style={styles.container}
-                source={{ uri: 'https://malcmind.com/Web-Apps/ai-traslation' }}
+                
+                source={{ uri: 'https://bdf4-173-170-156-98.ngrok-free.app/Web-Apps/ai-translation' }}
+                // source={{ uri: 'http://192.168.0.16:3000/Web-Apps/ai-translation' }}
+
+                // source={{ uri: 'https://malcmind.com/Web-Apps/ai-translation' }}
             />}
         </>
     );

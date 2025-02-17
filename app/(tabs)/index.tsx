@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { Audio } from 'expo-av';
+import RecordButton from '@/components/RecordButton';
 
 export default function App() {
   const [recording, setRecording] = useState();
@@ -81,8 +82,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text className='bg-black text-white'>Sound Recorder</Text>
-      <Button
+      <Text className='bg-black text-white p-10'>Sound Recorder</Text>
+      <RecordButton onPress={recording ? stopRecording : startRecording} />
+       <Button
         title={recording ? 'Stop Recording' : 'Start Recording'}
         onPress={recording ? stopRecording : startRecording}
       />
